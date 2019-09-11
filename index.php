@@ -22,15 +22,9 @@
     firebase.initializeApp(firebaseConfig);
     </script>
     <script>
-    //   if('serviceWorker' in navigator) {
-    //     navigator.serviceWorker.register('/service-worker.js')
-    //       .then(function() {
-    //             console.log('Service Worker Registered');
-    //     });
-    //   }
       if("serviceWorker" in navigator){
 		window.addEventListener('load',function(){
-			navigator.serviceWorker.register('/service-worker.js')
+			navigator.serviceWorker.register('./service-worker.js')
 			.then(function(){
 				console.log('ServiceWorker Registered');
 			})

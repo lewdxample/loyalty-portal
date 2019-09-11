@@ -1,7 +1,7 @@
 var cacheName = "loyalty-portal-page"
 var filesToCache = [
     '/',
-    '/index.php'
+    './index.php'
 ];
 
 self.addEventListener('install', function(e){
@@ -13,6 +13,10 @@ self.addEventListener('install', function(e){
         })
     );
 });
+
+
+
+
 
 self.addEventListener('active', event => {
     event.waitUntil(self.clients.claim());
