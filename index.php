@@ -22,13 +22,21 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     </script>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function() {
+                console.log('Service Worker Registered');
+          });
+      }
+    </script>
     <title>Document</title>
 </head>
 <body>
     <div style="margin: 100px">
         EXP : <input type="number" name="exp" id="m_exp"> <br> <br>
         COIN : <input type="number" name="coin" id="m_coin"> <br> <br>
-        <input type="button" name="entere" id="enter_btn" onclick="entere()" value="Save Exp">
+        <input type="button" name="entere" id="enter_btn" onclick="entere()" value="Save Exp"> <br>
         <input type="button" name="entere2" id="enter_btn1" onclick="entere1()" value="Save Coin">
     </div>
     
